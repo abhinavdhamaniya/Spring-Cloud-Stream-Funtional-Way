@@ -10,7 +10,7 @@ spring:
       default:
         contentType: application/json
       bindings:
-        employee-registration-out-0:
+        employeeRegistration-out-0:
           destination: employeeRegistrationExchange
         employeeRegistration-in-0:
           destination: employeeRegistrationExchange

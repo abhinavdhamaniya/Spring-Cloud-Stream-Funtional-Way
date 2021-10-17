@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 class EmployeePublisher (private val streamBridge: StreamBridge) {
 
     companion object {
-        const val OUTPUT_CHANNEL = "employee-registration-out-0"
+        const val OUTPUT_CHANNEL = "employeeRegistration-out-0"
     }
 
     fun publish(message: Message<Employee>) {

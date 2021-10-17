@@ -1,0 +1,23 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  cloud:
+    stream:
+      default:
+        contentType: application/json
+      bindings:
+        employee-registration-out-0:
+          destination: employeeRegistrationExchange
+        employeeRegistration-in-0:
+          destination: employeeRegistrationExchange
+          group: employeeRegistrationExchangeQueue
+          consumer:
+            concurrency: 10
+            max-attempts: 3
+
+server:
+  port: 8080
